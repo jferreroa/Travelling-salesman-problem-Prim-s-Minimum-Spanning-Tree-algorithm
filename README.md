@@ -1,1 +1,0 @@
-# Travelling-salesman-problem-Prim-s-Minimum-Spanning-Tree-algorithm
