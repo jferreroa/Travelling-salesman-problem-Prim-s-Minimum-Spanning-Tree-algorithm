@@ -189,22 +189,8 @@ public class Graph {
 
             u = w;
         }
-
-        Integer  IndexU,IndexW;
-        StringBuilder bothNum = new StringBuilder();
-
-        for(int a =vertexDegreeLessThan2.size()-1; a>=0; a--){
-            if(vertexDegreeLessThan2.elementAt(a)<2){
-                bothNum.append(a + " ");
-                vertexDegreeLessThan2.set(a,vertexDegreeLessThan2.elementAt(a)+1);
-            }
-        }
-         IndexU = Integer.parseInt(String.valueOf((bothNum.charAt(0))));
-         IndexW = Integer.parseInt(String.valueOf((bothNum.charAt(2))));
-
-        resultTSP.add(new Edge(IndexU, IndexW, g.cost(IndexU,IndexW)));
+        resultTSP.add(new Edge((int)u, startingPosition, g.cost(u,startingPosition)));
         return resultTSP;
-
     }
 
 }
