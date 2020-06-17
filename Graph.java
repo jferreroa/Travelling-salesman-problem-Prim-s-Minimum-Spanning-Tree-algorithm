@@ -189,7 +189,7 @@ public class Graph {
 
             u = w;
         }
-        resultTSP.add(new Edge((int)u, startingPosition, g.cost(u,startingPosition)));
+        resultTSP.add(new Edge(u, startingPosition, g.cost(u,startingPosition)));
         return resultTSP;
     }
 
